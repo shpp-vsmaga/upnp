@@ -43,10 +43,8 @@ extension ProductIdentifier.Token: LosslessStringConvertible {
         self.name = String(description[nameRange])
         
         do {
-            try guard let version = Version(String(description[versionRange])) else { return nil }
+            guard let version = try? Version(String(description[versionRange])) else { return nil }
             self.version = version
-        } catch {
-            
         }
     }
     
