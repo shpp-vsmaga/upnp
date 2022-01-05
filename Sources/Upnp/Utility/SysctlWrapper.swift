@@ -29,5 +29,5 @@ enum SysctlWrapper {
     static var osType: String { getKernelString(.osType) }
 
     /// System release (e.g. 19.0.0)
-    static var osRelease: Version { Version(getKernelString(.osRelease))! }
+    static var osRelease: Version { Version(getKernelString(.osRelease)) }
 }
