@@ -3,7 +3,7 @@ import Network
 import Promises
 import Socket
 
-struct DeviceFinder {
+public struct DeviceFinder {
     static let ssdpTimeoutRange: ClosedRange = 1...5
 
     static let unicastSearchTimeout: Int = 1
